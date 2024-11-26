@@ -5,22 +5,25 @@ using UnityEngine;
 
 public class WheelItemController : MonoBehaviour
 {
-    private List<WheelReward> _wheelRewards;
+    [SerializeField] private List<WheelRewardData> _wheelRewardDatas;
     [SerializeField] private List<WheelItem> _wheelItems;
 
     private void Start()
     {
-        Init();    
+        Init();
     }
 
     private void Init()
     {
         WheelSO wheelSO = GameConfigManager.Instance.GetCurrentWheelSO();
-        _wheelRewards = new List<WheelReward>();
+        _wheelRewardDatas = new List<WheelRewardData>();
+        _wheelRewardDatas.AddRange(wheelSO.Wheels);
+        _wheelRewardDatas.Shuffle();
+        _wheelRewardDatas.RemoveRange(_wheelItems.Count - 1, _wheelRewardDatas.Count - _wheelItems.Count);
         for(int i = 0; i < _wheelItems.Count; i++)
         {
-            _wheelRewards.Add(wheelSO.Wheels[i]);
+            _wheelItems[i].SetItemVisual(_wheelRewardDatas[i]);
+
         }
-        _wheelRewards.Shuffle();
     }
 }

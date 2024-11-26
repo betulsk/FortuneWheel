@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8958675287120015898}
   - component: {fileID: 2117938166903387709}
   m_Layer: 5
-  m_Name: ui_text_item_amount
+  m_Name: wheelItem_text_item_amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 3531493501382234129}
   - component: {fileID: 4251511746107097155}
   m_Layer: 5
-  m_Name: ui_img_item_icon_value
+  m_Name: wheelItem_img_item_icon_value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

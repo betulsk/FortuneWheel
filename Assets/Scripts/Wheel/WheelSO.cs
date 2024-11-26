@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class WheelSO : ScriptableObject
 {
-    [SerializeField] private List<WheelReward> _wheels;
-    public List<WheelReward> Wheels => _wheels;
+    [SerializeField] private List<WheelRewardData> _wheels;
+    public List<WheelRewardData> Wheels => _wheels;
 }
 
 [Serializable]
-public struct WheelReward
+public struct WheelRewardData
 {
     [SerializeField] private ERewardType _rewardType;
     [SerializeField] private Sprite _rewardSprite;
