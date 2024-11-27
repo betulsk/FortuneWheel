@@ -52,7 +52,7 @@ public class WheelSpinController : MonoBehaviour
     private void Spin()
     {
         _canSpin = false;
-        _spinButton.enabled = false;
+        _spinButton.interactable = false;
         if(!_isSpinning)
         {
             _isSpinning = true;
@@ -83,7 +83,7 @@ public class WheelSpinController : MonoBehaviour
                     OnSpinStartEvent = null;
                     OnSpinEndEvent = null;
                     _canSpin = true;
-                    _spinButton.enabled = true;
+                    _spinButton.interactable = true;
                 });
         }
     }
