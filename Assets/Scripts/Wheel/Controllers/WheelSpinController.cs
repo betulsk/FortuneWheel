@@ -31,7 +31,7 @@ public class WheelSpinController : MonoBehaviour
         _spinButton.onClick.RemoveListener(OnSpinButtonClicked);
         if(_spinTween != null)
         {
-            _spinTween.Complete();
+            _spinTween.Kill();
             _spinTween = null;
         }
     }
