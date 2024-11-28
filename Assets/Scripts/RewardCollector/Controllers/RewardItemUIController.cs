@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static Events;
 
-public class CollectController : MonoBehaviour
+public class RewardItemUIController : MonoBehaviour
 {
     private WheelRewardData _rewardData;
     private Dictionary<ERewardType, RewardItem> _collectedRewardTypesToRewardedItem;

@@ -6,4 +6,13 @@ public class Events : MonoBehaviour
     {
         public WheelRewardData WheelRewardData;
     }
+    
+    public struct OnWheelSpinStart
+    {
+    }
+
+    public struct OnGameFinished
+    {
+        public bool IsBombExplode;
+    }
 }

@@ -64,6 +64,7 @@ public class WheelSpinController : MonoBehaviour
         {
             _isSpinning = true;
             OnSpinStartEvent?.Invoke();
+            EventManager<OnWheelSpinStart>.CustomAction(this, new OnWheelSpinStart());
 
             int index = _wheel.GetRandomItemIndex();
             WheelItem wheelItem = _wheel.WheelItems[index];
