@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -13,13 +10,11 @@ public class GameManager : Singleton<GameManager>
         set { _level = value; }
     }
 
-    private void Start()
-    {
-        Init();
-    }
+    public Action OnLevelChanged;
 
-    private void Init()
+    public void IncreaseLevel()
     {
-
+        CurrentLevel++;
+        OnLevelChanged?.Invoke();
     }
 }
