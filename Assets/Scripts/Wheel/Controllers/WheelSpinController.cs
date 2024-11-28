@@ -57,17 +57,13 @@ public class WheelSpinController : MonoBehaviour
         if(!_isSpinning)
         {
             _isSpinning = true;
-            if(OnSpinStartEvent != null)
-            {
-                OnSpinStartEvent.Invoke();
-            }
+            OnSpinStartEvent?.Invoke();
 
             int index = _wheel.GetRandomItemIndex();
             WheelItem wheelItem = _wheel.WheelItems[index];
             Debug.Log("Item is : " + wheelItem.name);
 
             float angle = _pieceAngle * index;
-
             Vector3 targetRotation = Vector3.forward * (360 * _rotationRepeat + angle);
 
             _wheel.WheelVisualTransform
@@ -76,18 +72,13 @@ public class WheelSpinController : MonoBehaviour
                 .OnComplete(() =>
                 {
                     _isSpinning = false;
-                    if(OnSpinEndEvent != null)
-                    {
-                        OnSpinEndEvent.Invoke(wheelItem);
-                        OnWheelSpinEnd onWheelSpinEnd = new OnWheelSpinEnd();
-                        onWheelSpinEnd.WheelItem = wheelItem;
-                        EventManager<OnWheelSpinEnd>.CustomAction(this, onWheelSpinEnd);
-                    }
-
-                    OnSpinStartEvent = null;
-                    OnSpinEndEvent = null;
                     _canSpin = true;
                     _spinButton.interactable = true;
+
+                    OnSpinEndEvent?.Invoke(wheelItem);
+                    OnWheelSpinEnd onWheelSpinEnd = new OnWheelSpinEnd();
+                    onWheelSpinEnd.WheelRewardData = wheelItem.RewardData;
+                    EventManager<OnWheelSpinEnd>.CustomAction(this, onWheelSpinEnd);
                 });
         }
     }
