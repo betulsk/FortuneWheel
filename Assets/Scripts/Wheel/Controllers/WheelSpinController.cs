@@ -2,6 +2,7 @@ using DG.Tweening;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using static Events;
 
 public class WheelSpinController : MonoBehaviour
 {
@@ -78,6 +79,9 @@ public class WheelSpinController : MonoBehaviour
                     if(OnSpinEndEvent != null)
                     {
                         OnSpinEndEvent.Invoke(wheelItem);
+                        OnWheelSpinEnd onWheelSpinEnd = new OnWheelSpinEnd();
+                        onWheelSpinEnd.WheelItem = wheelItem;
+                        EventManager<OnWheelSpinEnd>.CustomAction(this, onWheelSpinEnd);
                     }
 
                     OnSpinStartEvent = null;
