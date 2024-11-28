@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static Events;
@@ -30,6 +29,14 @@ public class RewardItemUIController : MonoBehaviour
 
     private void Collect()
     {
+        if(_rewardData.RewardType == ERewardType.Bomb)
+        {
+            OnGameFinished onGameFinish = new OnGameFinished();
+            onGameFinish.IsBombExplode = true;
+            EventManager<OnGameFinished>.CustomAction(this, onGameFinish);
+            return;
+        }
+
         if(TrySpawnItem())
         {
             SpawnItem();
@@ -43,7 +50,9 @@ public class RewardItemUIController : MonoBehaviour
 
     private bool TrySpawnItem()
     {
-        if(_collectedRewardTypesToRewardedItem.Count <= 0 || !_collectedRewardTypesToRewardedItem.ContainsKey(_rewardData.RewardType))
+        if(_collectedRewardTypesToRewardedItem.Count <= 0 
+            || !_collectedRewardTypesToRewardedItem.ContainsKey(_rewardData.RewardType)
+            && _rewardData.RewardType != ERewardType.Bomb)
         {
             return true;
         }
