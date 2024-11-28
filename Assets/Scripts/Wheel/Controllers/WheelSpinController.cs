@@ -6,6 +6,7 @@ using static Events;
 
 public class WheelSpinController : MonoBehaviour
 {
+    private Tween _spinTween;
     private bool _canSpin = true;
     private bool _isSpinning;
     private float _pieceAngle;
@@ -28,6 +29,11 @@ public class WheelSpinController : MonoBehaviour
     private void OnDestroy()
     {
         _spinButton.onClick.RemoveListener(OnSpinButtonClicked);
+        if(_spinTween != null)
+        {
+            _spinTween.Complete();
+            _spinTween = null;
+        }
     }
 
     private void OnSpinButtonClicked()
@@ -66,11 +72,12 @@ public class WheelSpinController : MonoBehaviour
             float angle = _pieceAngle * index;
             Vector3 targetRotation = Vector3.forward * (360 * _rotationRepeat + angle);
 
-            _wheel.WheelVisualTransform
+            _spinTween = _wheel.WheelVisualTransform
                 .DORotate(targetRotation, _speed, RotateMode.FastBeyond360)
                 .SetEase(Ease.OutCubic)
                 .OnComplete(() =>
                 {
+                    _spinTween = null;
                     _isSpinning = false;
                     _canSpin = true;
                     _spinButton.interactable = true;
