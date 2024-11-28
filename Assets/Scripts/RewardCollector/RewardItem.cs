@@ -29,6 +29,7 @@ public class RewardItem : MonoBehaviour
 
     private void UpdateAmount()
     {
+        _rewardItemAmountText.SetText(_rewardAmount.ToString());
         UIUtilities.BoingEffect(_rewardItemAmountText.transform, Vector3.one, 1.15f, 0.25f);
     }
 }
