@@ -18,7 +18,9 @@ public class WheelItemController : MonoBehaviour
         _wheelRewardDatas = new List<WheelRewardData>();
         _wheelRewardDatas.AddRange(wheelSO.Wheels);
         _wheelRewardDatas.Shuffle();
-        _wheelRewardDatas.RemoveRange(wheelItems.Count - 1, _wheelRewardDatas.Count - wheelItems.Count);
+        _wheelRewardDatas.RemoveRange(wheelItems.Count - wheelSO.RequiredData.Count, _wheelRewardDatas.Count - wheelItems.Count + wheelSO.RequiredData.Count);
+        _wheelRewardDatas.AddRange(wheelSO.RequiredData);
+        _wheelRewardDatas.Shuffle();
         for(int i = 0; i < wheelItems.Count; i++)
         {
             wheelItems[i].SetItemVisual(_wheelRewardDatas[i]);

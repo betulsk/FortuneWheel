@@ -7,7 +7,10 @@ using UnityEngine;
 public class WheelSO : ScriptableObject
 {
     [SerializeField] private List<WheelRewardData> _wheels;
+    [SerializeField] private List<WheelRewardData> _requiredData;
+
     public List<WheelRewardData> Wheels => _wheels;
+    public List<WheelRewardData> RequiredData => _requiredData;
 }
 
 [Serializable]
