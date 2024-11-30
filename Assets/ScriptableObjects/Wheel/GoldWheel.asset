@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7304ee9f00d4e2e48ae42056514d97ee, type: 3}
   m_Name: GoldWheel
   m_EditorClassIdentifier: 
-  _wheelSprite: {fileID: 0}
-  _indicatorSprite: {fileID: 0}
+  _wheelSprite: {fileID: 21300000, guid: 599beeb2018916b478f8a4730863845a, type: 3}
+  _indicatorSprite: {fileID: 21300000, guid: b9fdbef009125104cb4fb6cb4268c524, type: 3}
   _wheels:
   - _rewardType: 2
     _rewardSprite: {fileID: 21300000, guid: 0eba8ac708bd0684f9a7af4bea0d8377, type: 3}

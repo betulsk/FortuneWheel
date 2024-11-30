@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BronzeWheel
   m_EditorClassIdentifier: 
   _wheelSprite: {fileID: 21300000, guid: 50057345caabf42498e69580e0fa21bf, type: 3}
-  _wheelIndicatorSprite: {fileID: 21300000, guid: cd98aff03ce9baa46b4bf588c1447ae9, type: 3}
+  _indicatorSprite: {fileID: 21300000, guid: cd98aff03ce9baa46b4bf588c1447ae9, type: 3}
   _wheels:
   - _rewardType: 2
     _rewardSprite: {fileID: 21300000, guid: 0eba8ac708bd0684f9a7af4bea0d8377, type: 3}

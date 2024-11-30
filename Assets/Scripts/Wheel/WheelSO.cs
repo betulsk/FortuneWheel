@@ -6,11 +6,15 @@ using UnityEngine;
 
 public class WheelSO : ScriptableObject
 {
+    [SerializeField] private Sprite _wheelSprite;
+    [SerializeField] private Sprite _indicatorSprite;
     [SerializeField] private List<WheelRewardData> _wheels;
     [SerializeField] private List<WheelRewardData> _requiredData;
 
     public List<WheelRewardData> Wheels => _wheels;
     public List<WheelRewardData> RequiredData => _requiredData;
+    public Sprite WheelSprite => _wheelSprite;
+    public Sprite IndicatorSprite => _indicatorSprite;
 }
 
 [Serializable]
