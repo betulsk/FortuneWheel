@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 
 public class GameConfigManager : Singleton<GameConfigManager>
@@ -21,6 +22,19 @@ public class GameConfigManager : Singleton<GameConfigManager>
                 if(lowestLevel < baseLevel)
                 {
                     lowestLevel = baseLevel;
+                    var keys = GameConfig.LevelCoefToWheelData.Dictionary.Keys.ToList();
+                    for(int i = GameConfig.LevelCoefToWheelData.Dictionary.Keys.Count - 1; i < GameConfig.LevelCoefToWheelData.Dictionary.Keys.Count; i--)
+                    {
+                        if(currentLevel % keys[i] == 0)
+                        {
+                            lowestLevel = keys[i];
+                            return GameConfig.LevelCoefToWheelData.Dictionary[lowestLevel];
+                        }
+                        else
+                        {
+                            lowestLevel = 1;
+                        }
+                    }
                 }
             }
         }
@@ -31,7 +45,7 @@ public class GameConfigManager : Singleton<GameConfigManager>
     {
         return GetCurrentWheelType(GameManager.Instance.CurrentLevel).WheelSO;
     }
-    
+
     public EWheelType GetCurrentWheelType()
     {
         return GetCurrentWheelType(GameManager.Instance.CurrentLevel).WheelType;
