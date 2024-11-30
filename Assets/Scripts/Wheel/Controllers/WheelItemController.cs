@@ -13,7 +13,7 @@ public class WheelItemController : MonoBehaviour
 
     private void Init()
     {
-        WheelSO wheelSO = GameConfigManager.Instance.GetCurrentWheelSO();
+        WheelSO wheelSO = GameManager.Instance.CurrentWheelSO;
         var wheelItems = _wheel.WheelItems;
         _wheelRewardDatas = new List<WheelRewardData>();
         _wheelRewardDatas.AddRange(wheelSO.Wheels);
