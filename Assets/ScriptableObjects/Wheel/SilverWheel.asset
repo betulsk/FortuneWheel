@@ -15,28 +15,28 @@ MonoBehaviour:
   _wheelSprite: {fileID: 21300000, guid: e9fee3ee635e0984c9925f802d2a8f93, type: 3}
   _indicatorSprite: {fileID: 21300000, guid: 227f3a95fa4eb514daded86a22146b4c, type: 3}
   _wheels:
-  - _rewardType: 2
-    _rewardSprite: {fileID: 21300000, guid: 0eba8ac708bd0684f9a7af4bea0d8377, type: 3}
-    _rewardMultiplier: 10
-  - _rewardType: 3
-    _rewardSprite: {fileID: 21300000, guid: 1e0f558d01d32ea44b9b5963be83dac9, type: 3}
-    _rewardMultiplier: 15
-  - _rewardType: 4
-    _rewardSprite: {fileID: 21300000, guid: abe983afc588778409e957d8fb38e595, type: 3}
+  - _rewardType: 14
+    _rewardSprite: {fileID: 21300000, guid: 48a47cbd2a5040b41a1dfc36fb55a377, type: 3}
+    _rewardMultiplier: 1
+  - _rewardType: 25
+    _rewardSprite: {fileID: 21300000, guid: 6894c253ce26f5b40a6efd455bc9e50c, type: 3}
+    _rewardMultiplier: 1
+  - _rewardType: 7
+    _rewardSprite: {fileID: 21300000, guid: 2a7d296cad1c31a4594d96c73ef848cb, type: 3}
     _rewardMultiplier: 100
-  - _rewardType: 4
-    _rewardSprite: {fileID: 21300000, guid: abe983afc588778409e957d8fb38e595, type: 3}
+  - _rewardType: 27
+    _rewardSprite: {fileID: 21300000, guid: 347228e7a581c454ba40129b1fe9407c, type: 3}
     _rewardMultiplier: 1000
+  - _rewardType: 17
+    _rewardSprite: {fileID: 21300000, guid: 837e0a9522d6a19469206b94d03afc71, type: 3}
+    _rewardMultiplier: 3
+  - _rewardType: 11
+    _rewardSprite: {fileID: 21300000, guid: 5c759a5694f5d5041b257a0cafa982ca, type: 3}
+    _rewardMultiplier: 1
+  - _rewardType: 8
+    _rewardSprite: {fileID: 21300000, guid: 5c759a5694f5d5041b257a0cafa982ca, type: 3}
+    _rewardMultiplier: 1
   - _rewardType: 5
-    _rewardSprite: {fileID: 21300000, guid: 4e4ffa526a006f34e851b794e8f5ab34, type: 3}
-    _rewardMultiplier: 1
-  - _rewardType: 6
     _rewardSprite: {fileID: 21300000, guid: 5c759a5694f5d5041b257a0cafa982ca, type: 3}
     _rewardMultiplier: 1
-  - _rewardType: 6
-    _rewardSprite: {fileID: 21300000, guid: 5c759a5694f5d5041b257a0cafa982ca, type: 3}
-    _rewardMultiplier: 2
-  - _rewardType: 6
-    _rewardSprite: {fileID: 21300000, guid: 5c759a5694f5d5041b257a0cafa982ca, type: 3}
-    _rewardMultiplier: 2
   _requiredData: []
