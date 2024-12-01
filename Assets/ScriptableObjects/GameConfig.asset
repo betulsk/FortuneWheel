@@ -33,4 +33,4 @@ MonoBehaviour:
         WheelType: 3
         WheelSO: {fileID: 11400000, guid: 544568618877bfc4d862f65dd82e4fb7, type: 2}
         WheelThresholdLevel: 30
-        Color: {r: 0.882353, g: 0.69803923, b: 0.31764707, a: 0}
+        Color: {r: 1, g: 0.8013955, b: 0.3915094, a: 1}
