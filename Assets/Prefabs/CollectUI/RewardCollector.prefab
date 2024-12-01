@@ -49,7 +49,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48795ccab4cea684f9d13250f63a9813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rewardItemController: {fileID: 2657783004422894279}
   _collectButton: {fileID: 5898975909682216384}
+  _singleRewardPrefab: {fileID: 7161041437060176119, guid: ddcf9e0d5abe4a647b77c50e19846f30, type: 3}
+  _spawnTransform: {fileID: 7084145150352147016}
+  _targetTransform: {fileID: 4386456143394944410}
 --- !u!1 &575729716062171423
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +316,7 @@ RectTransform:
   - {fileID: 3448351348870123771}
   - {fileID: 6331199740662486362}
   - {fileID: 1944492460032053968}
+  - {fileID: 7084145150352147016}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -581,6 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rewardItemPrefab: {fileID: 1744501215952394791, guid: 41dec0a32cc32bd468dc3be96721739f, type: 3}
   _rewardItemContentTransform: {fileID: 2904856111366488911}
+  _collectButtonController: {fileID: 2407899501442834442}
 --- !u!1 &7141630748630907355
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,3 +793,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &8717342747823578174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7084145150352147016}
+  m_Layer: 5
+  m_Name: SpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7084145150352147016
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717342747823578174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4386456143394944410}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 611, y: -71}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}

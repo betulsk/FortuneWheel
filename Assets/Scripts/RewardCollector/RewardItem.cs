@@ -18,7 +18,7 @@ public class RewardItem : MonoBehaviour
         _iconImage.sprite = data.RewardSprite;
         _iconImage.SetNativeSize();
         _rewardAmount = data.RewardMultiplier;
-        UpdateAmount();
+        //UpdateAmount();
     }
 
     public void IncreaseAmount(int amount)
@@ -27,7 +27,7 @@ public class RewardItem : MonoBehaviour
         UpdateAmount();
     }
 
-    private void UpdateAmount()
+    public void UpdateAmount()
     {
         _rewardItemAmountText.SetText(_rewardAmount.ToString());
         UIUtilities.BoingEffect(_rewardItemAmountText.transform, Vector3.one, 1.15f, 0.25f);

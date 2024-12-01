@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +13,10 @@ public class WheelVisualController : MonoBehaviour
 
     private void OnDestroy()
     {
-        GameManager.Instance.OnLevelChanged -= OnLevelChanged;
+        if(GameManager.Instance != null)
+        {
+            GameManager.Instance.OnLevelChanged -= OnLevelChanged;
+        }
     }
 
     private void OnLevelChanged()
