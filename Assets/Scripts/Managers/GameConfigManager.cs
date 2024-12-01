@@ -7,11 +7,6 @@ public class GameConfigManager : Singleton<GameConfigManager>
     [SerializeField] private GameConfig _gameConfig;
     public GameConfig GameConfig => _gameConfig;
 
-    private void Awake()
-    {
-        Application.targetFrameRate = 60;
-    }
-
     public WheelData GetCurrentWheelData(int currentLevel)
     {
         int lowestLevel = Int32.MinValue;
