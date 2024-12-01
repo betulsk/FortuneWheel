@@ -169,6 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6208800230881838490}
+  - component: {fileID: 4165679690406724800}
   m_Layer: 5
   m_Name: FailUI
   m_TagString: Untagged
@@ -200,6 +201,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4165679690406724800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2244515375360235416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b1710dd0097d743b2ff4dcf0a8b2ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _reviveButton: {fileID: 2284842260943374361}
 --- !u!1 &4902127422232487881
 GameObject:
   m_ObjectHideFlags: 0
