@@ -12,7 +12,7 @@ public class GameConfigManager : Singleton<GameConfigManager>
         Application.targetFrameRate = 60;
     }
 
-    public WheelData GetCurrentWheelType(int currentLevel)
+    public WheelData GetCurrentWheelData(int currentLevel)
     {
         int lowestLevel = Int32.MinValue;
         foreach(int baseLevel in GameConfig.LevelCoefToWheelData.Dictionary.Keys)
@@ -43,11 +43,11 @@ public class GameConfigManager : Singleton<GameConfigManager>
 
     public WheelSO GetCurrentWheelSO()
     {
-        return GetCurrentWheelType(GameManager.Instance.CurrentLevel).WheelSO;
+        return GetCurrentWheelData(GameManager.Instance.CurrentLevel).WheelSO;
     }
 
     public EWheelType GetCurrentWheelType()
     {
-        return GetCurrentWheelType(GameManager.Instance.CurrentLevel).WheelType;
+        return GetCurrentWheelData(GameManager.Instance.CurrentLevel).WheelType;
     }
 }

@@ -15,4 +15,5 @@ public struct WheelData
     public EWheelType WheelType;
     public WheelSO WheelSO;
     public int WheelThresholdLevel;
+    public Color Color;
 }

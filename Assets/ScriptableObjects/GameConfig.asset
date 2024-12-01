@@ -21,13 +21,16 @@ MonoBehaviour:
         WheelType: 1
         WheelSO: {fileID: 11400000, guid: 966683c6207f85a41bea68436724e8a2, type: 2}
         WheelThresholdLevel: 1
+        Color: {r: 1, g: 1, b: 1, a: 1}
     - _key: 5
       _value:
         WheelType: 2
         WheelSO: {fileID: 11400000, guid: 864d5ed2f2186144ba636fdd72f8e8a2, type: 2}
         WheelThresholdLevel: 5
+        Color: {r: 0.5058824, g: 0.5019608, b: 0.5058824, a: 1}
     - _key: 30
       _value:
         WheelType: 3
         WheelSO: {fileID: 11400000, guid: 544568618877bfc4d862f65dd82e4fb7, type: 2}
         WheelThresholdLevel: 30
+        Color: {r: 0.54509807, g: 0.31764707, b: 0.10588236, a: 0}
