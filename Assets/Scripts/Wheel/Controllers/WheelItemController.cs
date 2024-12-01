@@ -9,6 +9,15 @@ public class WheelItemController : MonoBehaviour
     private void Start()
     {
         Init();
+        GameManager.Instance.OnLevelChanged += OnLevelChanged;
+    }
+
+    private void OnDestroy()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.OnLevelChanged -= OnLevelChanged;
+        }
     }
 
     private void Init()
@@ -25,5 +34,10 @@ public class WheelItemController : MonoBehaviour
         {
             wheelItems[i].SetItemVisual(_wheelRewardDatas[i]);
         }
+    }
+
+    private void OnLevelChanged()
+    {
+        Init();
     }
 }
